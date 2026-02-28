@@ -19,7 +19,8 @@ scroll-behavior:smooth;
 /* HERO */
 .hero{
 position:relative;
-height:100vh;
+height:75vh;
+min-height:500px;
 overflow:hidden;
 }
 
@@ -37,25 +38,54 @@ left:50%;
 transform:translate(-50%,-50%);
 text-align:center;
 color:white;
-background:rgba(0,0,0,0.55);
-padding:30px 40px;
-border-radius:20px;
+background:rgba(0,0,0,0.45);
+backdrop-filter: blur(8px);
+padding:50px 35px;
+border-radius:30px;
+width:90%;
+max-width:480px;
+box-shadow:0 25px 50px rgba(0,0,0,0.35);
 animation:fadeUp 1.5s ease;
 }
 
 .hero-overlay img{
-width:120px;
-margin-bottom:20px;
+width:100px;
+margin-bottom:25px;
 }
 
 .hero-overlay h1{
-font-size:50px;
+font-size:40px;
 margin:0;
+letter-spacing:1px;
 }
 
-.hero-overlay p{
-color:#d4af37;
-margin-top:10px;
+.hero-overlay .tagline{
+margin-top:15px;
+font-size:16px;
+font-weight:300;
+line-height:1.6;
+color:#f1d37a;
+}
+
+.hero-overlay .tagline span{
+display:block;
+}
+
+.hero-btn{
+margin-top:25px;
+display:inline-block;
+padding:14px 30px;
+background:#d4af37;
+color:#0f3d2e;
+text-decoration:none;
+border-radius:12px;
+font-weight:600;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+background:#e6c65c;
+transform:translateY(-3px);
 }
 
 /* SECTION */
@@ -69,10 +99,10 @@ h2{
 text-align:center;
 color:#0f3d2e;
 margin-bottom:50px;
-font-size:32px;
+font-size:30px;
 }
 
-/* HAUPTGERICHTE MIT BILD */
+/* HAUPTGERICHTE */
 .menu-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -81,7 +111,7 @@ gap:30px;
 
 .menu-card{
 background:white;
-border-radius:18px;
+border-radius:20px;
 overflow:hidden;
 box-shadow:0 15px 35px rgba(0,0,0,0.08);
 transition:0.3s;
@@ -165,7 +195,7 @@ padding:14px 30px;
 background:#d4af37;
 color:#0f3d2e;
 text-decoration:none;
-border-radius:10px;
+border-radius:12px;
 font-weight:600;
 }
 
@@ -194,12 +224,20 @@ to{opacity:1;transform:translateY(0);}
 <div class="hero-overlay">
 <img src="logo.png">
 <h1>Café Mix</h1>
-<p>Somalischer Geschmack • Herzlichkeit • Gute Vibes</p>
+
+<div class="tagline">
+<span>Somalischer Geschmack</span>
+<span>Herzlichkeit & Tradition</span>
+<span>Gute Vibes in Linz</span>
+</div>
+
+<a href="#hauptspeisen" class="hero-btn">Speisekarte entdecken</a>
+
 </div>
 </section>
 
 <!-- HAUPTSPEISEN -->
-<section class="section">
+<section class="section" id="hauptspeisen">
 <h2>Hauptspeisen</h2>
 <div class="menu-grid">
 
@@ -253,56 +291,6 @@ to{opacity:1;transform:translateY(0);}
 </div>
 
 </div>
-</section>
-
-<!-- GETRÄNKE -->
-<section class="section">
-<h2>Getränke</h2>
-<div class="text-menu">
-<div class="text-item">Schwarz Tee – 2 €</div>
-<div class="text-item">Caffee – 2 €</div>
-<div class="text-item">Cola – 2 €</div>
-<div class="text-item">Fanta – 2 €</div>
-<div class="text-item">Pepsi – 2 €</div>
-<div class="text-item">Redbull – 2 €</div>
-<div class="text-item">Mirinda – 2 €</div>
-<div class="text-item">Eistee – 2 €</div>
-</div>
-</section>
-
-<!-- NACHSPEISEN -->
-<section class="section">
-<h2>Nachspeisen</h2>
-<div class="text-menu">
-<div class="text-item">Cupcakes – 1 €</div>
-<div class="text-item">Sambus – 1 €</div>
-<div class="text-item">Somali Burr – 1 €</div>
-<div class="text-item">Somali Anjera – 0,50 €</div>
-<div class="text-item">Palatschinken – 1 €</div>
-</div>
-</section>
-
-<!-- GALERIE -->
-<section class="section">
-<h2>Galerie</h2>
-<div class="gallery">
-<img src="bild1.jpg">
-<img src="bild2.jpg">
-<img src="bild3.jpg">
-<img src="bild4.jpg">
-</div>
-</section>
-
-<!-- MAP -->
-<section class="section map">
-<h2>Standort</h2>
-<iframe src="https://www.google.com/maps?q=Dinghoferstraße+55,+4020+Linz&output=embed"></iframe>
-</section>
-
-<!-- INSTAGRAM -->
-<section class="section instagram">
-<h2>Folge uns auf Instagram</h2>
-<a href="https://instagram.com/cafemix2025" target="_blank">@cafemix2025</a>
 </section>
 
 <footer>
