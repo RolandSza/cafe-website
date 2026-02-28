@@ -1,61 +1,170 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Café Sonnenschein</title>
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background-color: #f4f1ee;
-      text-align: center;
-    }
-    header {
-      background-color: #6b4f4f;
-      color: white;
-      padding: 40px;
-    }
-    section {
-      padding: 40px;
-    }
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-    }
-    .button {
-      background-color: #6b4f4f;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Mix – Linz</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f6f2;
+    color: #333;
+}
+
+header {
+    background: #0f3d2e;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #d4af37;
+    font-size: 18px;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0f3d2e;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.menu-item h3 {
+    margin-top: 0;
+    color: #0f3d2e;
+}
+
+.price {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+footer {
+    background: #0f3d2e;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #d4af37;
+    color: #0f3d2e;
+    text-decoration: none;
+    border-radius: 6px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Café Sonnenschein ☕</h1>
-  <p>Frischer Kaffee • Hausgemachte Kuchen • Gemütliche Atmosphäre</p>
+    <h1>Café Mix</h1>
+    <p>Somalischer Geschmack • Herzlichkeit • Gute Vibes</p>
 </header>
 
-<section>
-  <h2>Über uns</h2>
-  <p>Willkommen in unserem Café im Herzen der Stadt!</p>
+<section class="section">
+    <h2>Unsere Spezialitäten</h2>
+
+    <div class="menu-grid">
+
+        <div class="menu-item">
+            <h3>Reis</h3>
+            <p class="price">5,00 €</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Reis & Suqaar</h3>
+            <p>kleingeschnittenes Fleischgericht</p>
+            <p class="price">8,00 €</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Reis & Suqaar & Fleisch/Huhn</h3>
+            <p class="price">10,00 €</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Suqaar & Malawax oder Anjero</h3>
+            <p>Somalische Spezialitäten</p>
+            <p class="price">10,00 €</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Leber</h3>
+            <p class="price">10,00 €</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Sambusa</h3>
+            <p class="price">1,00 €</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Malawax</h3>
+            <p class="price">1,00 €</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Pasta & Sauce</h3>
+            <p class="price">8,00 €</p>
+        </div>
+
+    </div>
 </section>
 
-<section>
-  <h2>Öffnungszeiten</h2>
-  <p>Mo–Fr: 8:00 – 18:00<br>Sa–So: 9:00 – 16:00</p>
+<section class="section">
+    <h2>Standort</h2>
+    <p style="text-align:center;">
+        Dinghoferstraße 55<br>
+        4020 Linz<br>
+        Direkt bei mehreren Bushaltestellen
+    </p>
+
+    <div style="text-align:center; margin-top:20px;">
+        <a class="button" href="https://www.google.com/maps?q=Dinghoferstraße+55,+4020+Linz" target="_blank">
+            In Google Maps öffnen
+        </a>
+    </div>
 </section>
 
-<section>
-  <h2>Kontakt</h2>
-  <p>📍 Musterstraße 1<br>📞 01234 56789</p>
+<section class="section" style="text-align:center;">
+    <h2>Folge uns auf Instagram</h2>
+    <a class="button" href="https://instagram.com/cafemix2025" target="_blank">
+        @cafemix2025
+    </a>
 </section>
 
 <footer>
-  <p>© 2026 Café Sonnenschein</p>
+    © 2026 Café Mix – Linz
 </footer>
 
 </body>
