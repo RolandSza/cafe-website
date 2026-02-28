@@ -19,41 +19,43 @@ scroll-behavior:smooth;
 /* HERO */
 .hero{
 position:relative;
-height:85vh;
-background:url('hero.jpg') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
+height:100vh;
+overflow:hidden;
+}
+
+.hero img.hero-bg{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.hero-overlay{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
 text-align:center;
 color:white;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.6);
-}
-
-.hero-content{
-position:relative;
-z-index:1;
+background:rgba(0,0,0,0.55);
+padding:30px 40px;
+border-radius:20px;
 animation:fadeUp 1.5s ease;
 }
 
-.hero img{
+.hero-overlay img{
 width:120px;
 margin-bottom:20px;
 }
 
-.hero h1{
+.hero-overlay h1{
 font-size:50px;
 margin:0;
 }
 
-.hero p{
+.hero-overlay p{
 color:#d4af37;
-font-size:20px;
+margin-top:10px;
 }
 
 /* SECTION */
@@ -67,47 +69,43 @@ h2{
 text-align:center;
 color:#0f3d2e;
 margin-bottom:50px;
+font-size:32px;
 }
 
-/* MENU */
+/* HAUPTGERICHTE MIT BILD */
 .menu-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
 }
 
-.menu-item{
+.menu-card{
 background:white;
-border-radius:15px;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
 transition:0.3s;
 opacity:0;
 transform:translateY(40px);
 }
 
-.menu-item.show{
+.menu-card.show{
 opacity:1;
 transform:translateY(0);
 }
 
-.menu-item:hover{
-transform:translateY(-5px);
+.menu-card:hover{
+transform:translateY(-6px);
 }
 
-.menu-img{
-height:200px;
-overflow:hidden;
-}
-
-.menu-img img{
+.menu-card img{
 width:100%;
-height:100%;
+height:230px;
 object-fit:cover;
 }
 
 .menu-content{
-padding:20px;
+padding:25px;
 }
 
 .price{
@@ -116,18 +114,35 @@ font-weight:600;
 margin-top:10px;
 }
 
-/* GALLERY */
-.gallery{
+/* TEXT MENÜ */
+.text-menu{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
+}
+
+.text-item{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.06);
+transition:0.3s;
+}
+
+.text-item:hover{
+transform:translateY(-4px);
+}
+
+/* GALERIE */
+.gallery{
+columns:2;
+column-gap:15px;
 }
 
 .gallery img{
 width:100%;
-height:300px;
-object-fit:cover;
-border-radius:12px;
+margin-bottom:15px;
+border-radius:15px;
 }
 
 /* MAP */
@@ -135,12 +150,13 @@ border-radius:12px;
 width:100%;
 height:450px;
 border:0;
-border-radius:12px;
+border-radius:15px;
 }
 
 /* INSTAGRAM */
 .instagram{
 text-align:center;
+margin-top:50px;
 }
 
 .instagram a{
@@ -149,7 +165,7 @@ padding:14px 30px;
 background:#d4af37;
 color:#0f3d2e;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
 font-weight:600;
 }
 
@@ -158,8 +174,8 @@ footer{
 background:#0f3d2e;
 color:white;
 text-align:center;
-padding:30px;
-margin-top:50px;
+padding:40px;
+margin-top:80px;
 }
 
 /* ANIMATION */
@@ -172,20 +188,23 @@ to{opacity:1;transform:translateY(0);}
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
-<div class="hero-content">
+<img src="hero.jpg" class="hero-bg">
+<div class="hero-overlay">
 <img src="logo.png">
 <h1>Café Mix</h1>
 <p>Somalischer Geschmack • Herzlichkeit • Gute Vibes</p>
 </div>
 </section>
 
+<!-- HAUPTSPEISEN -->
 <section class="section">
 <h2>Hauptspeisen</h2>
 <div class="menu-grid">
 
-<div class="menu-item">
-<div class="menu-img"><img src="gericht1.jpg"></div>
+<div class="menu-card">
+<img src="reis_suqaar.jpg">
 <div class="menu-content">
 <h3>Reis & Suqaar</h3>
 <p>Zarte Lammstücke auf gewürztem Reis.</p>
@@ -193,10 +212,42 @@ to{opacity:1;transform:translateY(0);}
 </div>
 </div>
 
-<div class="menu-item">
-<div class="menu-img"><img src="gericht2.jpg"></div>
+<div class="menu-card">
+<img src="reis_fleisch.jpg">
 <div class="menu-content">
 <h3>Reis & Fleisch oder Huhn</h3>
+<p class="price">10 €</p>
+</div>
+</div>
+
+<div class="menu-card">
+<img src="spinat.jpg">
+<div class="menu-content">
+<h3>Spinat Salat (Kosto)</h3>
+<p class="price">10 €</p>
+</div>
+</div>
+
+<div class="menu-card">
+<img src="pasta.jpg">
+<div class="menu-content">
+<h3>Pasta & Sauce</h3>
+<p class="price">8 €</p>
+</div>
+</div>
+
+<div class="menu-card">
+<img src="malawax.jpg">
+<div class="menu-content">
+<h3>Suqaar & Malawax / Anjero</h3>
+<p class="price">10 €</p>
+</div>
+</div>
+
+<div class="menu-card">
+<img src="leber.jpg">
+<div class="menu-content">
+<h3>Leber</h3>
 <p class="price">10 €</p>
 </div>
 </div>
@@ -204,25 +255,54 @@ to{opacity:1;transform:translateY(0);}
 </div>
 </section>
 
+<!-- GETRÄNKE -->
+<section class="section">
+<h2>Getränke</h2>
+<div class="text-menu">
+<div class="text-item">Schwarz Tee – 2 €</div>
+<div class="text-item">Caffee – 2 €</div>
+<div class="text-item">Cola – 2 €</div>
+<div class="text-item">Fanta – 2 €</div>
+<div class="text-item">Pepsi – 2 €</div>
+<div class="text-item">Redbull – 2 €</div>
+<div class="text-item">Mirinda – 2 €</div>
+<div class="text-item">Eistee – 2 €</div>
+</div>
+</section>
+
+<!-- NACHSPEISEN -->
+<section class="section">
+<h2>Nachspeisen</h2>
+<div class="text-menu">
+<div class="text-item">Cupcakes – 1 €</div>
+<div class="text-item">Sambus – 1 €</div>
+<div class="text-item">Somali Burr – 1 €</div>
+<div class="text-item">Somali Anjera – 0,50 €</div>
+<div class="text-item">Palatschinken – 1 €</div>
+</div>
+</section>
+
+<!-- GALERIE -->
 <section class="section">
 <h2>Galerie</h2>
 <div class="gallery">
 <img src="bild1.jpg">
 <img src="bild2.jpg">
 <img src="bild3.jpg">
+<img src="bild4.jpg">
 </div>
 </section>
 
+<!-- MAP -->
 <section class="section map">
 <h2>Standort</h2>
 <iframe src="https://www.google.com/maps?q=Dinghoferstraße+55,+4020+Linz&output=embed"></iframe>
 </section>
 
+<!-- INSTAGRAM -->
 <section class="section instagram">
 <h2>Folge uns auf Instagram</h2>
-<a href="https://instagram.com/cafemix2025" target="_blank">
-@cafemix2025
-</a>
+<a href="https://instagram.com/cafemix2025" target="_blank">@cafemix2025</a>
 </section>
 
 <footer>
@@ -230,7 +310,7 @@ to{opacity:1;transform:translateY(0);}
 </footer>
 
 <script>
-const items = document.querySelectorAll('.menu-item');
+const cards = document.querySelectorAll('.menu-card');
 const observer = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
@@ -238,8 +318,8 @@ entry.target.classList.add('show');
 }
 });
 });
-items.forEach(item=>{
-observer.observe(item);
+cards.forEach(card=>{
+observer.observe(card);
 });
 </script>
 
