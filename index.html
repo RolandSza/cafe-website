@@ -27,7 +27,7 @@ color:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
+padding:15px 25px;
 z-index:1000;
 }
 
@@ -123,9 +123,6 @@ transform:translateY(-3px);
 box-shadow:0 12px 25px rgba(0,0,0,0.4);
 }
 
-.hero-btn:active{
-color:#0f3d2e;
-}
 .hero-btn:active{
 color:#0f3d2e;
 }
@@ -271,6 +268,43 @@ opacity:1;
 transform:translate(-50%,-50%);
 }
 }
+/* BURGER MENU */
+.burger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+@media (max-width:768px){
+
+.nav-links{
+position:absolute;
+top:70px;
+right:0;
+left:0;
+background:#0f3d2e;
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+max-height:0;
+overflow:hidden;
+transition:0.4s ease;
+}
+
+.nav-links a{
+margin:15px 0;
+}
+
+.nav-links.active{
+max-height:300px;
+}
+
+.burger{
+display:block;
+}
+
+}
 </style>
 </head>
 
@@ -278,7 +312,13 @@ transform:translate(-50%,-50%);
   
 <nav class="navbar">
 <div class="nav-logo">Café Mix</div>
-<div class="nav-links">
+
+<div class="burger" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links" id="navLinks">
+  
 <a href="#hauptspeisen">Speisen</a>
 <a href="#getraenke">Getränke</a>
 <a href="#galerie">Galerie</a>
@@ -437,7 +477,12 @@ entry.target.classList.add('show');
 sections.forEach(section=>{
 sectionObserver.observe(section);
 });
+function toggleMenu(){
+const nav = document.getElementById("navLinks");
+nav.classList.toggle("active");
+}
 </script>
+
 
 </body>
 </html>
