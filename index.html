@@ -17,33 +17,32 @@ scroll-behavior:smooth;
 padding-top:70px;
 }
 
+/* ===== NAVBAR ===== */
+
 .navbar{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-background:rgba(15,61,46,0.95);
+background:#0f3d2e;
 color:white;
 display:flex;
 align-items:center;
-justify-content:space-between;  /* HINZUFÜGEN */
-padding:15px 25px;
+padding:15px 20px;
 z-index:1000;
 }
 
 .nav-logo{
 font-weight:600;
+font-size:18px;
 }
+
 .nav-links{
 display:flex;
-align-items:center;
 gap:25px;
+margin-left:auto;   /* DAS schiebt Links nach rechts */
 }
-.burger{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
+
 .nav-links a{
 color:white;
 text-decoration:none;
@@ -54,6 +53,14 @@ transition:0.3s;
 .nav-links a:hover{
 color:#d4af37;
 }
+
+.burger{
+display:none;
+font-size:28px;
+cursor:pointer;
+margin-left:auto;   /* schiebt Burger nach rechts */
+}
+
 
 /* HERO */
 .hero{
@@ -277,7 +284,7 @@ transform:translate(-50%,-50%);
 }
 }
 
-@media (max-width: 900px){
+@media (max-width:768px){
 
 .nav-links{
 display:none;
@@ -291,10 +298,12 @@ display:block;
 display:flex;
 flex-direction:column;
 position:absolute;
-top:70px;
+top:60px;
 left:0;
 width:100%;
 background:#0f3d2e;
+padding:20px 0;
+text-align:center;
 }
 
 }
