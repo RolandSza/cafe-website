@@ -23,8 +23,9 @@ width:100%;
 background:#0f3d2e;
 color:white;
 display:flex;
+justify-content:space-between;  /* WICHTIG */
 align-items:center;
-padding:15px 15px;
+padding:15px;
 z-index:1000;
 }
 
@@ -36,7 +37,6 @@ font-size:18px;
 .nav-links{
 display:flex;
 gap:25px;
-margin-left:auto;   /* DAS schiebt Links nach rechts */
 }
 
 .nav-links a{
@@ -54,7 +54,6 @@ color:#d4af37;
 display:none;
 font-size:28px;
 cursor:pointer;
-margin-left:auto;   /* schiebt Burger nach rechts */
 }
 
 
