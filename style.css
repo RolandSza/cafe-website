@@ -1,0 +1,307 @@
+<style>
+*{
+box-sizing:border-box;
+}
+body{
+overflow-x:hidden;
+}
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f8f6f2;
+color:#333;
+scroll-behavior:smooth;
+padding-top:70px;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0f3d2e;
+color:white;
+display:flex;
+align-items:center;
+padding:15px 15px;
+z-index:1000;
+}
+
+.nav-logo{
+font-weight:600;
+font-size:18px;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+margin-left:auto;   /* DAS schiebt Links nach rechts */
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#d4af37;
+}
+
+.burger{
+display:none;
+font-size:28px;
+cursor:pointer;
+margin-left:auto;   /* schiebt Burger nach rechts */
+}
+
+
+/* HERO */
+.hero{
+position:relative;
+height:85vh;
+min-height:600px;
+overflow:hidden;
+}
+
+.hero img.hero-bg{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.hero-overlay{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+background:rgba(0,0,0,0.45);
+backdrop-filter: blur(6px);
+padding:40px 30px;
+border-radius:25px;
+width:85%;
+max-width:400px;
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+animation:fadeUp 0.9s ease-out forwards;
+will-change: transform, opacity;
+}
+
+.hero-overlay img{
+width:120px;
+margin-bottom:20px;
+}
+
+.hero-overlay h1{
+font-size:42px;
+line-height:1.1;
+}
+
+.hero-overlay p{
+color:#f1d37a;
+margin-top:15px;
+font-size:16px;
+line-height:1.7;
+font-weight:300;
+letter-spacing:0.5px;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 35px;
+background:#d4af37;
+color:#0f3d2e;
+font-weight:600;
+text-decoration:none;
+border-radius:50px;
+transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.hero-btn:visited{
+color:#0f3d2e;
+}
+
+.hero-btn:hover{
+background:#f1d37a;
+color:#0f3d2e;
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(0,0,0,0.4);
+}
+
+.hero-btn:active{
+color:#0f3d2e;
+}
+
+/* SECTION */
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+color:#0f3d2e;
+margin-bottom:50px;
+font-size:32px;
+}
+
+/* HAUPTGERICHTE MIT BILD */
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.menu-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+transition:0.3s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.menu-card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.menu-card:hover{
+transform:translateY(-6px);
+}
+
+.menu-card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.menu-content{
+padding:25px;
+}
+
+.price{
+color:#d4af37;
+font-weight:600;
+margin-top:10px;
+}
+
+/* TEXT MENÜ */
+.text-menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.text-item{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.06);
+transition:0.3s;
+}
+
+.text-item:hover{
+transform:translateY(-4px);
+}
+
+/* GALERIE */
+.gallery{
+columns:2;
+column-gap:15px;
+}
+
+.gallery img{
+width:100%;
+margin-bottom:15px;
+border-radius:15px;
+}
+
+/* MAP */
+.map iframe{
+width:100%;
+height:450px;
+border:0;
+border-radius:15px;
+}
+
+/* INSTAGRAM */
+.instagram{
+text-align:center;
+margin-top:50px;
+}
+
+.instagram a{
+display:inline-block;
+padding:14px 30px;
+background:#d4af37;
+color:#0f3d2e;
+text-decoration:none;
+border-radius:10px;
+font-weight:600;
+}
+
+/* FOOTER */
+footer{
+background:#0f3d2e;
+color:white;
+text-align:center;
+padding:40px;
+margin-top:80px;
+}
+
+/* ANIMATION */
+.section{
+opacity:0;
+transform:translateY(50px);
+transition:1s ease;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+@keyframes fadeUp{
+0%{
+opacity:0;
+transform:translate(-50%,-40%);
+}
+100%{
+opacity:1;
+transform:translate(-50%,-50%);
+}
+}
+
+@media (max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+.burger{
+display:block;
+}
+
+.nav-links.active{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:#0f3d2e;
+padding:20px 0;
+text-align:center;
+}
+
+}
+</style>
