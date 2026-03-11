@@ -480,4 +480,7 @@ border-right:none;
 .mobile-actions{
 border-top:1px solid rgba(255,255,255,0.2);
 }
+.section:nth-child(even){
+background:#f2efe9;
+}
 }
