@@ -501,4 +501,31 @@ margin-top:15px;
 font-size:14px;
 color:#555;
 }
+/* ABOUT SECTION */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+margin-top:40px;
+}
+
+.about-text{
+font-size:16px;
+line-height:1.7;
+color:#555;
+}
+
+.about-image img{
+width:100%;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+@media (max-width:768px){
+.about-grid{
+grid-template-columns:1fr;
+}
+}
 }
