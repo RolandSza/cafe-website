@@ -8,7 +8,7 @@ background:#f8f6f2;
 color:#333;
 scroll-behavior:smooth;
 padding-top:70px;
-padding-bottom:80px;
+padding-bottom:60px;
 overflow-x:hidden;
 }
 /* ===== NAVBAR ===== */
@@ -438,6 +438,7 @@ width:100%;
 background:#0f3d2e;
 display:flex;
 z-index:999;
+height:60px;
 }
 
 .mobile-bar a{
