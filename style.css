@@ -318,5 +318,35 @@ background:#0f3d2e;
 padding:20px 0;
 text-align:center;
 }
+/* WHY SECTION */
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.why-box{
+background:white;
+padding:30px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.why-box:hover{
+transform:translateY(-6px);
+}
+
+.why-box h3{
+color:#0f3d2e;
+margin-bottom:10px;
+}
+
+.why-box p{
+font-size:14px;
+line-height:1.6;
+}
 
 }
