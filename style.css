@@ -372,5 +372,31 @@ margin-bottom:10px;
 font-size:14px;
 opacity:0.8;
 }
+/* OEFFNUNGSZEITEN */
 
+.hours-box{
+max-width:500px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.hours-row{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #eee;
+font-size:15px;
+}
+
+.hours-row:last-child{
+border-bottom:none;
+}
+
+.hours-row span:first-child{
+font-weight:600;
+color:#0f3d2e;
+}
 }
