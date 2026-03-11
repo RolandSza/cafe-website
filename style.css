@@ -426,4 +426,41 @@ font-size:14px;
 margin-top:10px;
 color:#555;
 }
+.hours-row{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+font-size:16px;
+}
+.hours{
+margin-top:80px;
+}
+/* MOBILE ACTION BAR */
+
+.mobile-bar{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#0f3d2e;
+display:flex;
+z-index:999;
+}
+
+.mobile-bar a{
+flex:1;
+text-align:center;
+padding:15px;
+color:white;
+text-decoration:none;
+font-weight:600;
+border-right:1px solid rgba(255,255,255,0.2);
+}
+
+.mobile-bar a:last-child{
+border-right:none;
+}
+body{
+padding-bottom:70px;
+}
 }
