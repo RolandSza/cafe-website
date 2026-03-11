@@ -2,17 +2,15 @@
 box-sizing:border-box;
 }
 body{
-overflow-x:hidden;
-}
-body{
 margin:0;
 font-family:'Poppins',sans-serif;
 background:#f8f6f2;
 color:#333;
 scroll-behavior:smooth;
 padding-top:70px;
+padding-bottom:80px;
+overflow-x:hidden;
 }
-
 /* ===== NAVBAR ===== */
 
 .navbar{
@@ -426,12 +424,7 @@ font-size:14px;
 margin-top:10px;
 color:#555;
 }
-.hours-row{
-display:flex;
-justify-content:space-between;
-padding:10px 0;
-font-size:16px;
-}
+
 .hours{
 margin-top:80px;
 }
@@ -460,15 +453,7 @@ border-right:1px solid rgba(255,255,255,0.2);
 .mobile-bar a:last-child{
 border-right:none;
 }
-body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:#f8f6f2;
-color:#333;
-scroll-behavior:smooth;
-padding-top:70px;
-padding-bottom:80px; /* NEU */
-}
+
 .mobile-actions{
 border-top:1px solid rgba(255,255,255,0.2);
 }
