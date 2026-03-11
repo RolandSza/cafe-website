@@ -97,7 +97,7 @@ left:50%;
 transform:translate(-50%,-50%);
 text-align:center;
 color:white;
-background:rgba(0,0,0,0.45);
+background:rgba(0,0,0,0.35);
 backdrop-filter: blur(6px);
 padding:40px 30px;
 border-radius:25px;
