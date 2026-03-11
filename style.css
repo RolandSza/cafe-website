@@ -530,4 +530,14 @@ box-shadow:0 15px 40px rgba(0,0,0,0.15);
 grid-template-columns:1fr;
 }
 }
+.review-btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:#d4af37;
+color:#0f3d2e;
+text-decoration:none;
+border-radius:10px;
+font-weight:600;
+}
 }
