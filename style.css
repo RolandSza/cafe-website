@@ -535,6 +535,38 @@ border-radius:20px;
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
+/* --- PREMIUM UPGRADES: NAV-BUTTON & BADGES --- */
+.nav-cta{
+background:#d4af37;
+color:#0f3d2e !important;
+padding:8px 16px;
+border-radius:6px;
+font-weight:700;
+margin-left:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.nav-cta:hover{
+background:#f1d37a;
+transform:translateY(-2px);
+}
+.menu-card{
+position:relative; /* Erlaubt dem Badge, auf dem Bild zu kleben */
+}
+.badge{
+position:absolute;
+top:15px;
+right:15px;
+background:rgba(255,255,255,0.95);
+padding:6px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:700;
+color:#0f3d2e;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+z-index:2;
+pointer-events:none;
+}
+
 @media (max-width:768px){
 .about-grid{
 grid-template-columns:1fr;
