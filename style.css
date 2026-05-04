@@ -99,20 +99,15 @@ text-align:center;
 color:white;
 background:rgba(0,0,0,0.35);
 backdrop-filter: blur(6px);
-padding: 25px 20px; /* Geändert: Weniger Abstand, damit alles reinpasst */
+padding: 40px 30px;
 border-radius:25px;
 width:90%;
 max-width:450px;
-max-height: 88vh; /* Geändert: Die Box darf nicht größer als der Bildschirm werden */
-overflow-y: auto; /* Geändert: Falls es zu eng wird, kann man in der Box scrollen */
 box-shadow:0 20px 40px rgba(0,0,0,0.3);
 animation:fadeUp 0.9s ease-out forwards;
 will-change: transform, opacity;
 }
 
-/* Macht einen edlen, goldenen Scrollbalken, falls er gebraucht wird */
-.hero-overlay::-webkit-scrollbar { width: 5px; }
-.hero-overlay::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
 
 .hero-overlay img{
 width:120px;
@@ -555,69 +550,63 @@ text-decoration:none;
 border-radius:10px;
 font-weight:600;
 }
-/* --- NEUE BESTELL-BUTTONS --- */
-.hero-order-buttons {
+/* --- EDLE BESTELL-BUTTONS --- */
+.hero-actions {
+  margin-top: 30px;
+  border-top: 1px solid rgba(212, 175, 55, 0.3); /* Zarter goldener Strich zur Trennung */
+  padding-top: 25px;
+}
+
+.button-group {
   display: flex;
   gap: 15px;
   justify-content: center;
-  margin-top: 25px;
-  flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
-.btn-delivery {
-  padding: 12px 25px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.lieferando { background: #ff8000; }
-.foodora { background: #d70f64; }
-
-.btn-delivery:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-  color: white;
-}
-
-.hero-pickup {
-  margin-top: 25px;
-  padding-top: 15px;
-  border-top: 1px solid rgba(255,255,255,0.3);
-}
-
-.hero-pickup p {
+.btn-custom {
+  padding: 12px 20px;
+  border-radius: 8px; /* Leicht eckig wirkt moderner und hochwertiger */
   font-size: 14px;
-  margin-bottom: 10px;
-  color: #f1d37a;
-}
-
-.btn-whatsapp {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 10px 25px;
-  border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-whatsapp:hover {
-  background: #1ebd57;
-  transform: translateY(-3px);
+/* Edler transparenter Rahmen für Lieferando & Foodora */
+.btn-outline {
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  background: transparent;
+  flex: 1; /* Buttons sind exakt gleich groß */
 }
 
-/* --- VORSCHLAGHAMMER: Handy-Leiste auf PC verstecken --- */
-@media (min-width: 769px) {
-  .mobile-bar {
-    display: none !important;
-  }
-  body {
-    padding-bottom: 0 !important;
-  }
+.btn-outline:hover {
+  background: #d4af37;
+  color: #0f3d2e;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Hervorgehobener Gold-Button für WhatsApp (Deine wichtigste Einnahmequelle!) */
+.pickup-group p {
+  font-size: 13px;
+  color: #e0e0e0;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.btn-gold {
+  background: #d4af37;
+  color: #0f3d2e;
+  width: 100%;
+}
+
+.btn-gold:hover {
+  background: #f1d37a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
 }
 }
