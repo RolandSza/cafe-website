@@ -58,8 +58,8 @@ cursor:pointer;
 /* HERO */
 .hero{
 position:relative;
-height:85vh;
-min-height:600px;
+height:100vh;
+min-height:800px;
 overflow:hidden;
 }
 
