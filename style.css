@@ -493,7 +493,6 @@ border-right: none;
 
 /* =========================================
    PROFI-ANPASSUNGEN NUR FÜR HANDYS 
-   (HIER GIBT ES JETZT NUR NOCH EINEN BLOCK!)
    ========================================= */
 @media (max-width: 768px) {
   
@@ -523,12 +522,20 @@ border-right: none;
   /* Mobile Leiste anzeigen */
   .mobile-bar { display: flex; }
 
-  /* HERO-BOX PERFEKTIONIERUNG (Zieht die Box nach oben!) */
-  .hero-overlay {
-    margin-top: -60px; /* Zieht die Box nach oben, weg von der Leiste */
-    padding: 30px 15px; 
-    width: 94%; 
+  /* --- DER FIX: HERO-BOX PERFEKT ZENTRIEREN --- */
+  .hero {
+    min-height: auto; /* LÖST DAS PROBLEM: Hebt die 800px Zwangshöhe auf! */
+    height: 100vh;
+    height: 100dvh; /* Moderner Trick: Nutzt exakt den sichtbaren Bildschirm */
+    padding-bottom: 80px; /* Drückt die Box künstlich nach oben, weg von der grünen Leiste */
   }
+  
+  .hero-overlay {
+    margin-top: 0; 
+    padding: 30px 15px; 
+    width: 92%; 
+  }
+  
   .hero-overlay img {
     width: 90px;
     height: 90px;
