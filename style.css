@@ -109,9 +109,16 @@ will-change: transform, opacity;
 }
 
 
-.hero-overlay img{
-width:120px;
-margin-bottom:20px;
+.hero-overlay img {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 20px;
+  border-radius: 50%; /* Macht das viereckige Logo kreisrund */
+  border: 2px solid #d4af37; /* Ein edler goldener Ring */
+  background: #0f3d2e; /* Füllt den Hintergrund sauber auf */
+  object-fit: contain;
+  padding: 5px; /* Ein kleiner Abstand zwischen Logo und Goldring */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .hero-overlay h1{
@@ -486,13 +493,19 @@ height:60px;
 }
 
 .mobile-bar a {
-flex:1;
-text-align:center;
-padding:15px;
-color:white;
-text-decoration:none;
-font-weight:600;
-border-right:1px solid rgba(255,255,255,0.2);
+  flex: 1;
+  text-align: center;
+  padding: 0 10px; /* Geändert: Weniger Padding an den Seiten */
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center; /* Zentriert Emoji und Text perfekt vertikal */
+  justify-content: center;
+  white-space: nowrap; /* VERHINDERT das eklige Umbrechen! */
+  font-size: 14px; /* Ein minimaler Tick kleiner für Handys */
+  height: 100%;
 }
 
 .mobile-bar a:last-child {
@@ -568,69 +581,146 @@ pointer-events:none;
 }
 
 @media (max-width:768px){
-.about-grid{
-grid-template-columns:1fr;
+  .about-grid{
+    grid-template-columns:1fr;
+  }
 }
-}
+
 .review-btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 30px;
-background:#d4af37;
-color:#0f3d2e;
-text-decoration:none;
-border-radius:10px;
-font-weight:600;
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 30px;
+  background:#d4af37;
+  color:#0f3d2e;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:600;
 }
+
 /* --- EDLE BESTELL-BUTTONS --- */
 .hero-actions{
-margin-top:30px;
-border-top:1px solid rgba(212,175,55,0.3);
-padding-top:25px;
+  margin-top:30px;
+  border-top:1px solid rgba(212,175,55,0.3);
+  padding-top:25px;
 }
 .button-group{
-display:flex;
-gap:15px;
-justify-content:center;
-margin-bottom:20px;
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  margin-bottom:20px;
 }
 .btn-custom{
-padding:12px 20px;
-border-radius:8px;
-font-size:14px;
-font-weight:600;
-text-decoration:none !important;
-transition:all 0.3s ease;
-display:inline-flex;
-align-items:center;
-justify-content:center;
+  padding:12px 20px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none !important;
+  transition:all 0.3s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 }
 .btn-outline{
-border:1px solid #d4af37;
-color:#d4af37 !important;
-background:transparent;
-flex:1;
+  border:1px solid #d4af37;
+  color:#d4af37 !important;
+  background:transparent;
+  flex:1;
 }
 .btn-outline:hover{
-background:#d4af37;
-color:#0f3d2e !important;
-box-shadow:0 5px 15px rgba(212,175,55,0.4);
-transform:translateY(-2px);
+  background:#d4af37;
+  color:#0f3d2e !important;
+  box-shadow:0 5px 15px rgba(212,175,55,0.4);
+  transform:translateY(-2px);
 }
 .pickup-group p{
-font-size:13px;
-color:#e0e0e0;
-margin-bottom:12px;
-letter-spacing:0.5px;
+  font-size:13px;
+  color:#e0e0e0;
+  margin-bottom:12px;
+  letter-spacing:0.5px;
 }
 .btn-gold{
-background:#d4af37;
-color:#0f3d2e !important;
-width:100%;
+  background:#d4af37;
+  color:#0f3d2e !important;
+  width:100%;
 }
 .btn-gold:hover{
-background:#f1d37a;
-transform:translateY(-2px);
-box-shadow:0 8px 20px rgba(212,175,55,0.4);
+  background:#f1d37a;
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(212,175,55,0.4);
 }
+
+/* --- PREMIUM UPGRADES: NAV-BUTTON & BADGES --- */
+.nav-cta{
+  background:#d4af37;
+  color:#0f3d2e !important;
+  padding:8px 16px;
+  border-radius:6px;
+  font-weight:700;
+  margin-left:15px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.nav-cta:hover{
+  background:#f1d37a;
+  transform:translateY(-2px);
+}
+.menu-card{
+  position:relative; 
+}
+.badge{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:rgba(255,255,255,0.95);
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:700;
+  color:#0f3d2e;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+  z-index:2;
+  pointer-events:none;
+}
+
+/* --- PROFI-ANPASSUNGEN NUR FÜR HANDYS --- */
+@media (max-width: 768px) {
+  
+  /* Repariert den schiefen Button im Menü */
+  .nav-cta {
+    margin: 15px auto 0 auto !important; 
+    width: 80%;
+    text-align: center;
+    display: block; 
+  }
+
+  /* Elegantere Schriftgröße auf kleinen Bildschirmen */
+  .hero-overlay h1 {
+    font-size: 26px !important;
+  }
+  .hero-overlay h1 span {
+    font-size: 20px !important;
+  }
+
+  /* Schützt die Box davor, von der unteren Leiste überdeckt zu werden */
+  .hero {
+    height: 100vh;
+    padding-bottom: 60px; 
+    display: flex;
+    align-items: center; 
+  }
+
+  /* Buttons etwas kompakter, damit sie gut nebeneinander passen */
+  .btn-custom {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* --- VORSCHLAGHAMMER: Handy-Leiste auf PC verstecken --- */
+@media (min-width: 769px) {
+  .mobile-bar {
+    display: none !important;
+  }
+  body {
+    padding-bottom: 0 !important;
+  }
 }
