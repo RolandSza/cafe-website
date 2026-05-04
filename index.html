@@ -35,12 +35,27 @@
 <p class="hero-sub">Somalische Küche</p>
 <p class="hero-main">Tradition & Geschmack</p>
 <p class="hero-location">Mitten in Linz</p>
-<a href="#hauptspeisen" class="hero-btn">Speisekarte ansehen</a>
+  
+<div class="hero-order-buttons" style="flex-direction: column; align-items: center;">
+  
+  <!-- Das offizielle Lieferando Widget -->
+  <iframe src="https://order-now-toolkit.takeaway.com/widgets/button?restId=21502112&language=de&horizontal" width="280" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0"></iframe>
+
+  <!-- Der Foodora Button direkt darunter -->
+  <a href="https://www.foodora.at/restaurant/qfzf/cafe-mix" target="_blank" class="btn-delivery foodora" style="width: 250px; text-align: center;">🥡 Auf Foodora bestellen</a>
+
+</div>
+
+<div class="hero-pickup">
+  <p>Keine Liefergebühren zahlen? Einfach selbst abholen!</p>
+  <a href="https://wa.me/436706500848" target="_blank" class="btn-whatsapp">💬 Über WhatsApp vorbestellen</a>
+</div>
+
 <p class="hero-info">
-📍 Dinghoferstraße 55, Linz<br>
-🕒 Täglich 09:00 – 22:30
+📍 Dinghoferstraße 55, Linz | 🕒 Täglich 09:00 – 22:30
 </p>
 </div>
+  
 </section>
 
 <!-- HAUPTSPEISEN -->
@@ -344,13 +359,9 @@ document.getElementById("navLinks").classList.remove("active");
 </script>
 
 <div class="mobile-bar">
-
-<a href="tel:+436706500848">📞 Anrufen</a>
-
-<a href="https://www.google.com/maps/dir/?api=1&destination=Dinghoferstraße+55+Linz" target="_blank">
-📍 Navigation
-</a>
-
+  <a href="tel:+436706500848">📞 Anrufen</a>
+  <a href="https://wa.me/436706500848?text=Hallo%20Café%20MIX,%20ich%20würde%20gerne%20Essen%20zum%20Abholen%20vorbestellen](https://wa.me/436706500848?text=Hallo%20Café%20MIX,%20ich%20würde%20gerne%20Essen%20zum%20Abholen%20vorbestellen)!" target="_blank" style="color: #25D366;">💬 WhatsApp</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Dinghoferstraße+55+Linz" target="_blank">📍 Route</a>
 </div>
   
 </body>
