@@ -45,9 +45,20 @@ transition: 0.3s;
 color: #d4af37;
 }
 .burger {
-display: none;
-font-size: 28px;
-cursor: pointer;
+  display: none;
+  font-size: 22px; /* Etwas dezenter */
+  cursor: pointer;
+  color: #d4af37; /* In edlem Gold */
+  border: 1px solid rgba(212, 175, 55, 0.5); /* Zarter Goldrahmen */
+  padding: 6px 14px;
+  border-radius: 8px; /* Elegant abgerundet */
+  background: rgba(255, 255, 255, 0.05); /* Minimaler Schimmer */
+  transition: all 0.3s ease;
+}
+
+.burger:active {
+  transform: scale(0.92); /* Knopf drückt sich beim Tippen leicht rein */
+  background: rgba(212, 175, 55, 0.2); /* Gold leuchtet beim Klicken auf */
 }
 
 /* PREMIUM UPGRADES: NAV-BUTTON */
@@ -503,12 +514,16 @@ border-right: none;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 100%; /* Klebt jetzt perfekt und nahtlos an der oberen Leiste! */
     left: 0;
     width: 100%;
     background: #0f3d2e;
     padding: 20px 0;
     text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.3); /* Goldener Trennstrich */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.4); /* Edler Schatten nach unten */
+    border-bottom-left-radius: 20px; /* Unten weich abgerundet */
+    border-bottom-right-radius: 20px;
   }
   .nav-cta {
     margin: 15px auto 0 auto !important; 
