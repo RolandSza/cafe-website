@@ -610,4 +610,15 @@ font-weight:600;
   background: #1ebd57;
   transform: translateY(-3px);
 }
+/* --- VORSCHLAGHAMMER: Handy-Leiste auf PC verstecken --- */
+@media (min-width: 769px) {
+  .mobile-bar {
+    display: none !important;
+  }
+  
+  /* Kleiner Bonus: Macht Platz, damit der Footer auf dem PC nicht in der Luft hängt */
+  body {
+    padding-bottom: 0 !important;
+  }
+}
 }
