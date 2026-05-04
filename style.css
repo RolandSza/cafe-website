@@ -541,4 +541,59 @@ text-decoration:none;
 border-radius:10px;
 font-weight:600;
 }
+/* --- NEUE BESTELL-BUTTONS --- */
+.hero-order-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.btn-delivery {
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.lieferando { background: #ff8000; }
+.foodora { background: #d70f64; }
+
+.btn-delivery:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+  color: white;
+}
+
+.hero-pickup {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.hero-pickup p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #f1d37a;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebd57;
+  transform: translateY(-3px);
+}
 }
