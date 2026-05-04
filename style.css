@@ -507,50 +507,56 @@ border-right: none;
    ========================================= */
 @media (max-width: 768px) {
   
-  /* Menü & Navigation */
+  /* --- 1. DAS EDLE BURGER-ICON --- */
+  .burger { 
+    display: block; 
+    font-size: 22px; 
+    color: #d4af37; 
+    border: 1px solid rgba(212, 175, 55, 0.5); 
+    padding: 4px 10px; 
+    border-radius: 8px; 
+    background: rgba(255, 255, 255, 0.05); 
+  }
+
+  /* --- 2. DAS PREMIUM DROPDOWN-MENÜ --- */
   .nav-links { display: none; }
-  .burger { display: block; }
   .nav-links.active {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100%; /* Klebt jetzt perfekt und nahtlos an der oberen Leiste! */
+    top: 60px; /* Klebt direkt unter der Leiste */
     left: 0;
     width: 100%;
     background: #0f3d2e;
-    padding: 20px 0;
+    padding: 20px 0 30px 0;
     text-align: center;
-    border-top: 1px solid rgba(212, 175, 55, 0.3); /* Goldener Trennstrich */
-    box-shadow: 0 15px 25px rgba(0,0,0,0.4); /* Edler Schatten nach unten */
-    border-bottom-left-radius: 20px; /* Unten weich abgerundet */
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5); /* Starker Schatten */
+    border-bottom-left-radius: 20px; /* Runde Ecken unten */
     border-bottom-right-radius: 20px;
   }
+  
   .nav-cta {
     margin: 15px auto 0 auto !important; 
     width: 80%;
     display: block; 
   }
 
-  /* Grid-Anpassungen */
   .about-grid { grid-template-columns: 1fr; }
-
-  /* Mobile Leiste anzeigen */
   .mobile-bar { display: flex; }
 
-  /* --- DER FIX: HERO-BOX PERFEKT ZENTRIEREN --- */
+  /* --- HERO-BOX --- */
   .hero {
-    min-height: auto; /* LÖST DAS PROBLEM: Hebt die 800px Zwangshöhe auf! */
+    min-height: auto; 
     height: 100vh;
-    height: 100dvh; /* Moderner Trick: Nutzt exakt den sichtbaren Bildschirm */
-    padding-bottom: 80px; /* Drückt die Box künstlich nach oben, weg von der grünen Leiste */
+    height: 100dvh; 
+    padding-bottom: 80px; 
   }
-  
- .hero-overlay {
-    margin-top: -120px !important; /* Zwingt die Box extrem nach oben */
-    padding: 30px 15px !important; 
-    width: 92% !important; 
+  .hero-overlay {
+    margin-top: -100px; /* Hier habe ich die Box etwas sanfter positioniert */
+    padding: 30px 15px; 
+    width: 92%; 
   }
-  
   .hero-overlay img {
     width: 90px;
     height: 90px;
@@ -572,7 +578,6 @@ border-right: none;
     font-size: 13px;
   }
 }
-
 /* --- VORSCHLAGHAMMER: Handy-Leiste auf PC verstecken --- */
 @media (min-width: 769px) {
 .mobile-bar { display: none !important; }
