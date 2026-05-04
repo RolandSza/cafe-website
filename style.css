@@ -530,10 +530,10 @@ border-right: none;
     padding-bottom: 80px; /* Drückt die Box künstlich nach oben, weg von der grünen Leiste */
   }
   
-  .hero-overlay {
-    margin-top: 0; 
-    padding: 30px 15px; 
-    width: 92%; 
+ .hero-overlay {
+    margin-top: -120px !important; /* Zwingt die Box extrem nach oben */
+    padding: 30px 15px !important; 
+    width: 92% !important; 
   }
   
   .hero-overlay img {
