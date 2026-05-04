@@ -551,62 +551,54 @@ border-radius:10px;
 font-weight:600;
 }
 /* --- EDLE BESTELL-BUTTONS --- */
-.hero-actions {
-  margin-top: 30px;
-  border-top: 1px solid rgba(212, 175, 55, 0.3); /* Zarter goldener Strich zur Trennung */
-  padding-top: 25px;
+.hero-actions{
+margin-top:30px;
+border-top:1px solid rgba(212,175,55,0.3);
+padding-top:25px;
 }
-
-.button-group {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 25px;
+.button-group{
+display:flex;
+gap:15px;
+justify-content:center;
+margin-bottom:20px;
 }
-
-.btn-custom {
-  padding: 12px 20px;
-  border-radius: 8px; /* Leicht eckig wirkt moderner und hochwertiger */
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.btn-custom{
+padding:12px 20px;
+border-radius:8px;
+font-size:14px;
+font-weight:600;
+text-decoration:none !important;
+transition:all 0.3s ease;
+display:inline-flex;
+align-items:center;
+justify-content:center;
 }
-
-/* Edler transparenter Rahmen für Lieferando & Foodora */
-.btn-outline {
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  background: transparent;
-  flex: 1; /* Buttons sind exakt gleich groß */
+.btn-outline{
+border:1px solid #d4af37;
+color:#d4af37 !important;
+background:transparent;
+flex:1;
 }
-
-.btn-outline:hover {
-  background: #d4af37;
-  color: #0f3d2e;
-  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+.btn-outline:hover{
+background:#d4af37;
+color:#0f3d2e !important;
+box-shadow:0 5px 15px rgba(212,175,55,0.4);
+transform:translateY(-2px);
 }
-
-/* Hervorgehobener Gold-Button für WhatsApp (Deine wichtigste Einnahmequelle!) */
-.pickup-group p {
-  font-size: 13px;
-  color: #e0e0e0;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
+.pickup-group p{
+font-size:13px;
+color:#e0e0e0;
+margin-bottom:12px;
+letter-spacing:0.5px;
 }
-
-.btn-gold {
-  background: #d4af37;
-  color: #0f3d2e;
-  width: 100%;
+.btn-gold{
+background:#d4af37;
+color:#0f3d2e !important;
+width:100%;
 }
-
-.btn-gold:hover {
-  background: #f1d37a;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+.btn-gold:hover{
+background:#f1d37a;
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(212,175,55,0.4);
 }
 }
