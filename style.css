@@ -318,26 +318,35 @@ color: #555;
 text-align: center;
 margin-top: 50px;
 }
-.instagram a {
-display: inline-block;
-padding: 14px 30px;
-background: #d4af37;
-color: #0f3d2e;
-text-decoration: none;
-border-radius: 10px;
-font-weight: 600;
+/* PREMIUM SOCIAL BUTTONS */
+.instagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
 }
-.review-btn {
-display: inline-block;
-margin-top: 20px;
-padding: 14px 30px;
-background: #d4af37;
-color: #0f3d2e;
-text-decoration: none;
-border-radius: 10px;
-font-weight: 600;
+.instagram a, .review-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 35px;
+  background: #d4af37;
+  color: #0f3d2e;
+  text-decoration: none;
+  border-radius: 50px; /* Edle Pillenform */
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+  width: 90%;
+  max-width: 350px;
 }
-
+.instagram a:hover, .review-btn:hover {
+  transform: translateY(-3px);
+  background: #f1d37a;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
 /* WHY SECTION */
 .why-grid {
 display: grid;
@@ -377,12 +386,20 @@ font-size: 16px;
 line-height: 1.8;
 color: #555;
 }
+
+/* ABOUT IMAGE PREMIUM FRAME */
 .about-image img {
-width: 100%;
-height: 350px;
-object-fit: cover;
-border-radius: 20px;
-box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid white; /* Eleganter weißer Bilderrahmen */
+  box-shadow: -15px 15px 0 rgba(212, 175, 55, 0.15); /* Versetzter goldener Schatten */
+  transition: 0.4s ease;
+}
+.about-image img:hover {
+  transform: translate(5px, -5px);
+  box-shadow: -20px 20px 0 rgba(212, 175, 55, 0.2);
 }
 
 /* GOOGLE RATING */
@@ -632,6 +649,15 @@ border-right: none;
     box-shadow: 0 15px 25px rgba(0,0,0,0.5); /* Starker Schatten */
     border-bottom-left-radius: 20px; /* Runde Ecken unten */
     border-bottom-right-radius: 20px;
+  }
+  
+  /* Handy-Überschriften eleganter machen */
+  h2 {
+    font-size: 26px; /* Etwas kleiner für perfekte Passform */
+    margin-bottom: 30px;
+  }
+  .section {
+    padding: 60px 15px; /* Etwas weniger leerer Raum am Rand */
   }
   
   .nav-cta {
