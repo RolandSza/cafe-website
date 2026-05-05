@@ -107,19 +107,18 @@ display: block;
 z-index: 0;
 }
 
-/* HERO BOX (Dunkel, halbtransparent) */
+/* HERO BOX (Unsichtbar für Premium-Look auf dunklem Holz) */
 .hero-overlay {
 position: relative;
 z-index: 2;
 text-align: center;
 color: white;
-background: rgba(0,0,0,0.35);
-backdrop-filter: blur(6px);
+background: transparent; /* Box unsichtbar gemacht */
+backdrop-filter: none; /* Blur-Effekt entfernt */
 padding: 40px 30px;
-border-radius: 25px;
 width: 90%;
 max-width: 450px;
-box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+box-shadow: none; /* Schatten entfernt */
 animation: fadeUp 0.9s ease-out forwards;
 will-change: transform, opacity;
 }
